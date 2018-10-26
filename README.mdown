@@ -1,0 +1,15 @@
+**Welcome to my github blog.**
+
+Site domain is: [shadandeajian.top](https://shadandeajian.top/)
+
+Also available with github link:[https://shadandeajian.github.io/](https://shadandeajian.github.io/)
+
+TODO:How to **build** this blog:[]()
+
+TODO:How to **optimize** this blog:[]()
+
+TODO:How to solve markdown problem:[]()
+
+Hope you have fun here!
+
+Edit by _shadandeajian_.
