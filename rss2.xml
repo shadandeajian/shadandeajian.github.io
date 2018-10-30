@@ -8,27 +8,23 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>长沙理工大学_CS专业_大二在读</description>
-    <pubDate>Mon, 29 Oct 2018 13:50:14 GMT</pubDate>
+    <pubDate>Tue, 30 Oct 2018 12:20:22 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>test</title>
-      <link>http://shadandeajian.top/2018/10/29/test/</link>
-      <guid>http://shadandeajian.top/2018/10/29/test/</guid>
+      <title>加密文章</title>
+      <link>http://shadandeajian.top/2018/10/29/%E5%8A%A0%E5%AF%86%E6%96%87%E7%AB%A0/</link>
+      <guid>http://shadandeajian.top/2018/10/29/%E5%8A%A0%E5%AF%86%E6%96%87%E7%AB%A0/</guid>
       <pubDate>Mon, 29 Oct 2018 13:48:27 GMT</pubDate>
       <description>
       
-        
-        
-          &lt;p&gt;1231231231231&lt;/p&gt;
-
-        
+        &lt;p&gt;这是一篇加密文章&lt;br&gt;
       
       </description>
       
-      <content:encoded><![CDATA[<p>1231231231231</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>这是一篇加密文章<br><a id="more"></a><br>测试加密内容</p>]]></content:encoded>
       
-      <comments>http://shadandeajian.top/2018/10/29/test/#disqus_thread</comments>
+      <comments>http://shadandeajian.top/2018/10/29/%E5%8A%A0%E5%AF%86%E6%96%87%E7%AB%A0/#disqus_thread</comments>
     </item>
     
     <item>

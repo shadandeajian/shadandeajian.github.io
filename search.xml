@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[test]]></title>
-    <url>%2F2018%2F10%2F29%2Ftest%2F</url>
-    <content type="text"><![CDATA[1231231231231]]></content>
+    <title><![CDATA[加密文章]]></title>
+    <url>%2F2018%2F10%2F29%2F%E5%8A%A0%E5%AF%86%E6%96%87%E7%AB%A0%2F</url>
+    <content type="text"><![CDATA[这是一篇加密文章测试加密内容]]></content>
+      <tags>
+        <tag>加密文章</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Hexo + Github 搭建个人博客]]></title>
@@ -18,7 +21,7 @@
     <url>%2F2018%2F10%2F17%2FPOJ-3321-DFS%E5%BA%8F-%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84-%E6%9F%A5%E8%AF%A2%E5%AD%90%E6%A0%91%2F</url>
     <content type="text"><![CDATA[题目：传送门题意：给一个树，查询结点下的子树的苹果总数，并且要求支持增减苹果 题解：查询子树，我们首先想到的是DFS序，还要支持修改操作，我们可以用树状数组维护这个DFS序，因为还要查询，所以我在实际程序中使用了欧拉序。 AC代码：12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667#include &lt;iostream&gt;#include &lt;vector&gt;#include &lt;cstdio&gt;#define debug(x) cout&lt;&lt;#x&lt;&lt;" = "&lt;&lt;x&lt;&lt;endl;#define INF 0x3f3f3f3fusing namespace std;const int maxn = 100010;vector&lt;vector&lt;int&gt; &gt; g(maxn);//vector&lt;int&gt; g[maxn]这么写会TLE 虽让我也不知道为什么int step, start_dfs[maxn], end_dfs[maxn], f[maxn];void dfs(int u) &#123; start_dfs[u] = step; for (vector&lt;int&gt;::iterator iter = g[u].begin(); iter != g[u].end(); iter++) &#123; step++; dfs(*iter); &#125; end_dfs[u] = step;&#125;/********************树状数组模板************************/int BITree_max = maxn; //数据范围[1,BITree],注意最小值是1，如果为0，请++int BITree_num[maxn];//maxn为元素的个数void Update(int i, int value) &#123; //更新结点i的值为value while (i &lt;= BITree_max) &#123; BITree_num[i] += value; i += i &amp; -i; &#125;&#125;int Query(int i) &#123;//查询[1,n]的综合 int ans = 0; while (i &gt; 0) &#123; ans += BITree_num[i]; i -= i &amp; -i; &#125; return ans;&#125;/********************树状数组模板************************/int main(void) &#123; int n, m, u, v; scanf("%d", &amp;n); for (int i = 1; i &lt; n; i++) &#123; scanf("%d%d", &amp;u, &amp;v); g[u].push_back(v);//建树 &#125; step = 1; dfs(1);//dfs序 for (int i = 1; i &lt;= n; i++) &#123; Update(start_dfs[i], 1);//树状数组 f[i] = 1;//1代表有苹果 &#125; scanf("%d", &amp;m); char op;int key; for (int i = 1; i &lt;= m; i++) &#123; scanf(" %c%d", &amp;op, &amp;key);//用空格屏蔽换行符，第一次见到 if (op == 'C') &#123; debug(Query(start_dfs[key])); Update(start_dfs[key], ((f[key] ^ 1) - f[key])); debug(Query(start_dfs[key])); debug(((f[key] ^ 1) - f[key])); f[key] ^= 1;//0代表无苹果 &#125; else cout &lt;&lt; Query(end_dfs[key]) - Query(start_dfs[key] - 1) &lt;&lt; endl; &#125; return 0;&#125;]]></content>
       <tags>
-        <tag>POJ</tag>
+        <tag>POJ,DFS序,树状数组</tag>
       </tags>
   </entry>
 </search>
